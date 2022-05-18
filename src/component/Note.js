@@ -7,7 +7,7 @@ function extracter(notes)
 {
   return(
     <div className='note'>
-        <h1>{notes.titile}</h1>
+        <h1>{notes.title}</h1>
         <p>{notes.content} </p>
    </div>
   )
