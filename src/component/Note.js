@@ -1,24 +1,20 @@
-import React from 'react'
-import x from "../notes"
+import React from "react";
 
-export default function Note() {
+function Note(props) {
 
-function extracter(notes)
-{
-  return(
-    <div className='note'>
-        <h1>{notes.title}</h1>
-        <p>{notes.content} </p>
-   </div>
-  )
-}
+  function handleClick() {
+    props.onDelete(props.id);
+    console.log(props);
+  }
+  console.log(props);
 
   return (
-   
-   <>
-
-   {x.map(extracter)}
-
-</>
-  )
+    <div className="note">
+      <h1>{props.title}</h1>
+      <p>{props.content}</p>
+      <button onClick={handleClick}>DELETE</button>
+    </div>
+  );
 }
+
+export default Note;
